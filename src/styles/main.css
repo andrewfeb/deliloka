@@ -1,3 +1,4 @@
-img {
-  display: block;
-}
+@import url('base.css');
+@import url('components/card.css');
+@import url('components/menu.css');
+@import url('components/button.css');
