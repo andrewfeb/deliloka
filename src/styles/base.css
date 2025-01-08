@@ -94,7 +94,6 @@ header.sticky {
 .logo {
   height: 40px;
   width: 100%;
-  padding: 0.75rem;
 }
 
 .hero {
@@ -116,7 +115,6 @@ header.sticky {
   text-align: center;
   margin-top: 4rem;
   color: var(--white-color-base);
-  gap: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -228,11 +226,11 @@ input:focus{
 }
 
 .container {
-  /* margin: 0 auto; */
+  margin: 0 auto;
   width: 100%;
 }
 
-@media screen and (min-width:540px) {
+@media (min-width:540px) {
   .container {
     max-width: 540px;
   }
@@ -241,8 +239,11 @@ input:focus{
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
-    padding-right: 1rem;
-    padding-left: 1rem;
+  }
+
+  .main-content {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
 
@@ -252,8 +253,8 @@ input:focus{
   }
 
   h1 {
-    font-size: 3.75rem;
-    line-height: 3.5rem;
+    font-size: 2.75rem;
+    line-height: 2.5rem;
   }
 
   .grid {
@@ -281,8 +282,11 @@ input:focus{
 @media (min-width:1024px) {
   .container {
     max-width: 1024px;
-    padding-right: 3rem;
-    padding-left: 3rem;
+  }
+
+  h1 {
+    font-size: 3.75rem;
+    line-height: 3.5rem;
   }
 
   .grid {
@@ -293,7 +297,5 @@ input:focus{
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
-    padding-right: 5rem;
-    padding-left: 5rem;
   }
 }

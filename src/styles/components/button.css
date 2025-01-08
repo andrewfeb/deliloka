@@ -32,6 +32,10 @@
   color: var(--text-color);
 }
 
+.btn-link {
+  padding: 12px 0;
+}
+
 .btn-primary:hover {
   background-color: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + var(--hover-color-l-delta)));
 }

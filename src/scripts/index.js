@@ -76,7 +76,7 @@ listOfResto.forEach(item => {
   resto += `<article class="card">
                 <img src="${item.pictureId}" alt="Image Restaurant ${item.name}">
                 <div class="card-body">
-                    <a href="#"><h3 class="card-title">${item.name}</h3></a>
+                    <a class="btn btn-link" href="#"><h3 class="card-title">${item.name}</h3></a>
                     <div class="icon"><i class="material-symbols-rounded text-sm">location_on</i><span class="text-sm">${item.city}</span></div>
                     <div class="icon">${setVisualRating(item.rating)}<span class="text-sm">${item.rating}</span></div>
                     <p class="card-text">${strLimit(item.description, 150)}</p>
