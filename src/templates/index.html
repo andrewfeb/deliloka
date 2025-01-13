@@ -4,16 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Web that provides a list of restaurants">
-  <link rel="stylesheet" href="" />
+  <meta name="description" content="Web that provides a catalogue of restaurants">
+  <link rel="icon" href="./favicon.png" />
   <title>Deliloka</title>
 </head>
 
 <body>
-  <a href="#main-content" class="skip-link btn btn-primary">Skip to Content</a>
+  <a href="#page-content" class="skip-link btn btn-primary">Skip to Content</a>
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
   <header>
     <div class="container">
-      <div class="navbar">
+      <!-- <div class="navbar">
         <a href="/">
           <img src="images/logo/logo.svg" class="logo" alt="Deliloka">
         </a>
@@ -30,18 +33,19 @@
             <li><a href="https://github.com/andrewfeb" target="_blank" rel="noreferrer">ABOUT</a></li>
           </ul>
         </nav>
-      </div>
+      </div> -->
+      <x-navbar class="navbar"></x-navbar>
     </div>
   </header>
-  <section class="hero">
+  <!-- <section class="hero">
     <div class="hero-content">
       <h1>Discover Most Culinary Places</h1>
       <p class="subtitle">We will help you to discover a restaurant you like</p>
       <a href="#" class="btn btn-primary">Our List</a>
     </div>
-  </section>
-  <main id="main-content">
-    <section class="container">
+  </section> -->
+  <main id="page-content">
+    <!-- <section class="container">
       <div class="main-content">
         <div class="section-title">
           <h2>List Restaurant</h2>
@@ -64,7 +68,7 @@
           <button type="button" class="btn btn-primary">Subscribe</button>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
   <footer>
     <p class="copyright">Copyright&copy;2025 - Deliloka</p>

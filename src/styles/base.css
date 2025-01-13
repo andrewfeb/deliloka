@@ -230,6 +230,12 @@ input:focus{
   width: 100%;
 }
 
+@keyframes spinner {
+  to {
+    transform: rotate(1turn) scale(1.2 );
+  }
+}
+
 @media (min-width:540px) {
   .container {
     max-width: 540px;
