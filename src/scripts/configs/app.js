@@ -4,9 +4,7 @@ const CONFIG = {
   DB_NAME: 'restaurant-db',
   DB_VERSION: 1,
   OBJECT_STORE_NAME: 'restaurants',
-  CACHE_NAME: new Date().toISOString(),
-  WEB_SOCKET_SERVER: 'wss://restaurant-api.dicoding.dev/',
-  TOKEN_KEY: '12345',
+  CACHE_NAME: new Date().toISOString()
 };
 
 export default CONFIG;

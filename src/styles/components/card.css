@@ -40,3 +40,16 @@
   padding-top: 10px;
   color: var(--text-color);
 }
+
+.card-review {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: var(--radius-default);
+  border: 1px solid hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l));
+  line-height: 1.5em;
+}
+
+.border-none {
+  border: none;
+  margin: 0;
+}

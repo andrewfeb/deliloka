@@ -3,7 +3,11 @@ import './resto-item';
 class RestoList extends HTMLElement {
   set restaurants(restaurants) {
     this.restoList = restaurants;
-    this.render();
+    if (this.restoList) {
+      this.render();
+    } else {
+      this.renderError('Not found');
+    }
   }
 
   render() {

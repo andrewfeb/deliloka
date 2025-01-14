@@ -34,6 +34,11 @@
 
 .btn-link {
   padding: 12px 0;
+  min-width: 44px;
+}
+
+.btn-full {
+  width: 100% !important;
 }
 
 .btn-primary:hover {

@@ -1,6 +1,7 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 const app = new App({
   button: document.querySelector('.navbar-toggler'),
@@ -19,16 +20,20 @@ window.addEventListener('load', () => {
   loaderContainer?.classList.add('hidden');
   pageContent?.classList.add('visible');
   app.renderPage();
+swRegister();
 });
 
 // sticky header/navbar
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header');
-  header?.classList.toggle('sticky', window.scrollY > 10);
+
+  if (app.url === null) {
+    header?.classList.toggle('sticky', window.scrollY > 10);
+  }
 });
 
-const btnTop = document.querySelector('.btn-top');
 // show or hidden top button
+const btnTop = document.querySelector('.btn-top');
 window.onscroll = () => {
   const height = document.body.scrollTop || document.documentElement.scrollTop;
 

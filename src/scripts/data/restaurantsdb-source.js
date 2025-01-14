@@ -1,30 +1,52 @@
 import API from '../configs/api';
-import CONFIG from '../configs/app';
 
 class RestaurantsDB {
   static async getAll() {
-    const response = await (await fetch(API.LIST)).json();
+    try {
+      const response = await fetch(API.LIST);
 
-    return response.restaurants;
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+
+      const responseJson = await response.json();
+
+      return responseJson.restaurants;
+    } catch (error) {
+      console.error(error.message);
+    }
   }
 
   static async get(id) {
-    const response = await (await fetch(API.DETAIL(id))).json();
+    try {
+      const response = await fetch(API.DETAIL(id));
 
-    return response.restaurant;
+      if (!response.ok) {
+        throw new Error(`Network response was not ok ${response.statusText}`);
+      }
+
+      const responseJson = await response.json();
+
+      return responseJson.restaurant;
+    } catch (error) {
+      console.error(error.message);
+    }
   }
 
   static async addReview(data) {
-    const response = await fetch(API.ADD_REVIEW, {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-        'X-Auth-Token': CONFIG.TOKEN_KEY,
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      const response = await fetch(API.ADD_REVIEW, {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json;',
+        },
+        body: JSON.stringify(data),
+      });
 
-    return response;
+      return response;
+    } catch (error) {
+      console.error(error.message);
+    }
   }
 }
 

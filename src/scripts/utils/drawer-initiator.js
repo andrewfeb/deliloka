@@ -4,8 +4,7 @@ const drawerInitiator = {
     drawer,
     content,
   }) {
-    button.addEventListener('click', (event) => {
-      console.log('drawer click');
+    button?.addEventListener('click', (event) => {
       this.toggleDrawer(event, drawer);
       /*const icon = button.querySelector('i');
 
@@ -18,13 +17,13 @@ const drawerInitiator = {
       }*/
     });
 
-    drawer.addEventListener('click', (event) => {
+    drawer?.addEventListener('click', (event) => {
       if (event.target.className === 'nav-link') {
         this.closeDrawer(event, drawer);
       }
     });
 
-    content.addEventListener('click', (event) => {
+    content?.addEventListener('click', (event) => {
       this.closeDrawer(event, drawer);
     });
   },

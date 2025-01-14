@@ -1,7 +1,6 @@
-import '../components/navbar';
-import '../components/hero';
 import '../components/resto-list';
 import '../components/subscription';
+import '../components/hero';
 import RestaurantsDB from '../../data/restaurantsdb-source';
 
 const home = {
@@ -17,7 +16,7 @@ const home = {
             <p class="subtitle text-base">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
           </div>
           <x-resto-list class="list grid"></x-resto-list>
-      </div>
+        </div>
       </section>
       <x-subscription />
     `;
@@ -25,8 +24,8 @@ const home = {
 
   async afterRender() {
     const restaurants = await RestaurantsDB.getAll();
-    console.log(restaurants);
     const restoList = document.querySelector('x-resto-list');
+
     if (restoList) {
       restoList.restaurants = restaurants;
     }
