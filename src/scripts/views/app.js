@@ -2,6 +2,7 @@ import drawerInitiator from '../utils/drawer-initiator';
 import urlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 import './components/navbar';
+import './components/404';
 
 class App {
   constructor({
@@ -37,25 +38,31 @@ class App {
   async renderPage() {
     const url = urlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    this.resource = urlParser.parseActiveUrlWithoutCombiner().resource;
-    this.mContent.innerHTML = await page.render();
-    await page.afterRender();
-
-    // add active class in current menu
-    const menus = document.querySelectorAll('.active');
-    menus.forEach((menu) => {
-      menu.classList.remove('active');
-    });
-    const currentMenu = document.querySelector(`a[href="#${url}"`);
-    if (this.isNotHome(currentMenu)) {
-      currentMenu?.classList.add('active');
-    }
-    // add sticky in header
     const header = document.querySelector('header');
-    if (this.url === null) {
-      header.classList.remove('sticky');
-    } else {
+    this.resource = urlParser.parseActiveUrlWithoutCombiner().resource;
+    try {
+      this.mContent.innerHTML = await page.render();
+      await page.afterRender();
+
+      // add active class in current menu
+      const menus = document.querySelectorAll('.active');
+      menus.forEach((menu) => {
+        menu.classList.remove('active');
+      });
+      const currentMenu = document.querySelector(`a[href="#${url}"`);
+      if (this.isNotHome(currentMenu)) {
+        currentMenu?.classList.add('active');
+      }
+      // add sticky in header
+
+      if (this.url === null) {
+        header.classList.remove('sticky');
+      } else {
+        header.classList.add('sticky');
+      }
+    } catch (error) {
       header.classList.add('sticky');
+      this.mContent.appendChild(document.createElement('x-404'));
     }
   }
 }

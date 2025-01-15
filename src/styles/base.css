@@ -179,6 +179,7 @@ header.sticky {
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap:2rem;
 }
 
 .not-found>img {
@@ -254,6 +255,11 @@ textarea {
 
 .radius-full {
   border-radius:var(--radius-full);
+}
+
+.height-full {
+  min-height: 92vh;
+  margin: auto 0;
 }
 
 input::placeholder,

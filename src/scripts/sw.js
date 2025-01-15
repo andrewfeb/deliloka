@@ -5,6 +5,7 @@ const assets = [
   './images/heros/hero-image_4.jpg',
   './images/logo/logo.svg',
   './images/bg.png',
+  './images/404.png',
   './icons/icon-72x72.png',
   './icons/icon-96x96.png',
   './icons/icon-128x128.png',

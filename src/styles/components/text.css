@@ -27,3 +27,8 @@
   font-size: 0.75rem;
   line-height: 1rem;
 }
+
+.text-lg {
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+}

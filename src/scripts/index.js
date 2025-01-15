@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
   loaderContainer?.classList.add('hidden');
   pageContent?.classList.add('visible');
   app.renderPage();
-swRegister();
+  swRegister();
 });
 
 // sticky header/navbar
