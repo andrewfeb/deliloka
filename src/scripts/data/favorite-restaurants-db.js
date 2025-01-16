@@ -14,6 +14,8 @@ const favoriteRestaurantIdb = {
   // Get a single item by ID
   async get(id) {
     try {
+      if (!id) return false;
+
       return (await dbPromise).get(OBJECT_STORE_NAME, id);
     } catch (error) {
       console.error('Error getting data:', error);
@@ -30,6 +32,9 @@ const favoriteRestaurantIdb = {
   // Add or update an item
   async put(restaurant) {
     try {
+      // eslint-disable-next-line no-prototype-builtins
+      if (!restaurant.hasOwnProperty('id')) return false;
+
       return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
     } catch (error) {
       console.error('Error putting data:', error);
@@ -38,6 +43,9 @@ const favoriteRestaurantIdb = {
   // Delete an item by ID
   async delete(id) {
     try {
+
+      if (!id) return false;
+
       return (await dbPromise).delete(OBJECT_STORE_NAME, id);
     } catch (error) {
       console.error('Error deleting data:', error);

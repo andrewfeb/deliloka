@@ -2,7 +2,7 @@ import 'regenerator-runtime';
 import cacheHelper from './utils/cache-helper';
 
 const assets = [
-  './images/heros/hero-image_4.jpg',
+  './images/heros/hero.jpg',
   './images/logo/logo.svg',
   './images/bg.png',
   './images/404.png',

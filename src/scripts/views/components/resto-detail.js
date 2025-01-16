@@ -10,7 +10,7 @@ class RestoDetail extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="detail">
-        <img class="cover" src="${CONFIG.BASE_IMAGE_URL('medium', this.restoItem.pictureId)}" alt="${this.restoItem.name}">
+        <img class="cover lazyload" data-src="${CONFIG.BASE_IMAGE_URL('medium', this.restoItem.pictureId)}" alt="${this.restoItem.name}">
         <div class="detail-desc">
           <div class="title">
             <h3 class="text-secondary">${this.restoItem.name}</h3>

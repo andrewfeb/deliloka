@@ -107,7 +107,7 @@ header.sticky {
   position: relative;
   width: 100%;
   min-height: 75vh;
-  background: linear-gradient(360deg, rgba(31, 30, 30, 0.7), rgba(72, 71, 71, 0.3)), url("../public/images/heros/hero-image_4.jpg");
+  background-image: linear-gradient(360deg, rgba(31, 30, 30, 0.7), rgba(72, 71, 71, 0.3)), url("../public/images/heros/hero-sm.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -322,6 +322,7 @@ textarea:focus{
   .hero {
     min-height: 100vh;
     width: 100%;
+    background-image: linear-gradient(360deg, rgba(31, 30, 30, 0.7), rgba(72, 71, 71, 0.3)), url("../public/images/heros/hero-md.jpg");
   }
 
   .logo {
@@ -355,5 +356,9 @@ textarea:focus{
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
+  }
+
+  .hero {
+    background-image: linear-gradient(360deg, rgba(31, 30, 30, 0.7), rgba(72, 71, 71, 0.3)), url("../public/images/heros/hero-lg.jpg");
   }
 }

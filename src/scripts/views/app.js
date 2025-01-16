@@ -61,6 +61,7 @@ class App {
         header.classList.add('sticky');
       }
     } catch (error) {
+      console.error(error);
       header.classList.add('sticky');
       this.mContent.appendChild(document.createElement('x-404'));
     }
