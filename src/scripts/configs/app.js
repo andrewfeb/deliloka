@@ -4,7 +4,7 @@ const CONFIG = {
   DB_NAME: 'restaurant-db',
   DB_VERSION: 1,
   OBJECT_STORE_NAME: 'restaurants',
-  CACHE_NAME: new Date().toISOString()
+  CACHE_NAME: 'cache_resto'
 };
 
 export default CONFIG;
